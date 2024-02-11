@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResponsiveNavbar3</title>
+    <link rel="stylesheet" href="nav3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">UnderweaR</div>
+        <ul class="menu-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <script>
+        const toggleBtn =document.querySelector('.toggle-btn')
+        const Icon= document.querySelector('.toggle-btn i')
+        const menu = document.querySelector(".menu-list")
+        toggleBtn.addEventListener('click',()=>{
+            if(Icon.classList.contains('fa-bars')){
+                Icon.classList.replace('fa-bars','fa-xmark');
+               menu.style.left = 0;
+            }else{
+                Icon.classList.replace('fa-xmark','fa-bars');
+                menu.style.left ='-100%'
+            }
+        })
+    </script>
+</body>
+</html>
